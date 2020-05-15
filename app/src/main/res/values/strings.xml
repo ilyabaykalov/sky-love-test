@@ -5,5 +5,7 @@
     <string name="welcome_text">Рады видеть Вас на SkyLove!</string>
     <string name="welcome_subtext">Авторизуйтесь и найдите новых друзей</string>
     <string name="email_hint">Введите e-mail</string>
+    <string name="password_hint">Введите пароль</string>
     <string name="btn_accept_text">OK</string>
+    <string name="btn_closed">Кнопка закрытия</string>
 </resources>
