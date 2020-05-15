@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Test Project</string>
+
+    <string name="background_login">Фон страницы авторизации</string>
+    <string name="welcome_text">Рады видеть Вас на SkyLove!</string>
+    <string name="welcome_subtext">Авторизуйтесь и найдите новых друзей</string>
+    <string name="email_hint">Введите e-mail</string>
+    <string name="btn_accept_text">OK</string>
+</resources>

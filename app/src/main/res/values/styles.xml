@@ -1,0 +1,32 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="WelcomeText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="WelcomeText.Main">
+        <item name="fontFamily">@font/sf_ui_display_regular</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="WelcomeText.Addition">
+        <item name="fontFamily">@font/sf_ui_display_light</item>
+        <item name="android:textSize">16.9sp</item>
+    </style>
+
+    <style name="InputText">
+        <item name="fontFamily">@font/sf_ui_display_light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_input</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+</resources>
