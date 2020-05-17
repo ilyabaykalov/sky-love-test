@@ -6,7 +6,7 @@ import java.util.List;
 
 public class PhotoResponse {
 
-    @SerializedName("user")
+    @SerializedName("photos")
     private List<Photo> photos;
 
     public static class Photo {

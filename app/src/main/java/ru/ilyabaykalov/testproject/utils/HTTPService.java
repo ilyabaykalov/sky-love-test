@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.ilyabaykalov.testproject.SkyLoveAPI.API;
+import ru.ilyabaykalov.testproject.API;
 
 public class HTTPService {
     private static final String BASE_URL = "https://api.skylove.su/";

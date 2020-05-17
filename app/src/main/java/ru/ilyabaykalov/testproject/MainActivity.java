@@ -1,5 +1,6 @@
 package ru.ilyabaykalov.testproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,7 +74,11 @@ public class MainActivity extends AppCompatActivity {
                 .enqueue(new Callback<UserResponse>() {
                     @Override
                     public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
-
+                        if (response.body() != null) {
+                            Intent intent = new Intent(getApplicationContext(), GalleryActivity.class);
+                            intent.putExtra("user", response.body().getUser());
+                            startActivity(intent);
+                        }
                     }
 
                     @Override
