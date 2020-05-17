@@ -9,6 +9,10 @@ public class PhotoResponse {
     @SerializedName("photos")
     private List<Photo> photos;
 
+    public List<Photo> getPhotos() {
+        return photos;
+    }
+
     public static class Photo {
         @SerializedName("photo_id")
         private int photoId;

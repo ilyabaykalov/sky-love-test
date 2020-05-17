@@ -8,4 +8,5 @@
     <string name="password_hint">Введите пароль</string>
     <string name="btn_accept_text">OK</string>
     <string name="btn_closed">Кнопка закрытия</string>
+    <string name="photo">Фотография из галереи</string>
 </resources>
