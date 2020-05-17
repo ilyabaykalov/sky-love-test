@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -63,5 +64,10 @@ public class GalleryActivity extends AppCompatActivity {
 
                     }
                 });
+    }
+
+    @OnClick(R.id.close_button)
+    public void onCloseButtonClick() {
+        super.onBackPressed();
     }
 }

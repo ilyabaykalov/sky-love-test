@@ -2,12 +2,12 @@ package ru.ilyabaykalov.testproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -29,9 +29,29 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.input_password)
     EditText inputPassword;
 
-    @BindView(R.id.ok_button)
-    Button okButton;
-    View.OnClickListener getData = v -> {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_auth);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initForm();
+    }
+
+    private void initForm() {
+        inputEmail.setText("");
+        inputEmail.setVisibility(VISIBLE);
+
+        inputPassword.setText("");
+        inputPassword.setVisibility(GONE);
+    }
+
+    @OnClick(R.id.ok_button)
+    public void onOKButtonClick() {
         switch (inputEmail.getVisibility()) {
             case VISIBLE:
                 inputEmail.setVisibility(GONE);
@@ -41,16 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 sendData();
                 break;
         }
-    };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_auth);
-
-        ButterKnife.bind(this);
-
-        okButton.setOnClickListener(getData);
     }
 
     private void sendData() {
@@ -78,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), GalleryActivity.class);
                             intent.putExtra("user", response.body().getUser());
                             startActivity(intent);
+                        } else if (response.errorBody() != null) {
+                            runOnUiThread(() -> {
+                                initForm();
+                                Toast.makeText(getApplicationContext(),
+                                        "Ошибка авторизации",
+                                        Toast.LENGTH_LONG).show();
+                            });
                         }
                     }
 
