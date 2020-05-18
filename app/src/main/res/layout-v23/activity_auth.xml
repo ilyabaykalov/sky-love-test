@@ -8,18 +8,18 @@
         android:background="@drawable/background_blur"
         tools:context=".MainActivity">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/background"
-            app:srcCompat="@drawable/background"
+            android:src="@drawable/background"
             android:foreground="@drawable/background_login_border"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:elevation="15dp"
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
-            android:contentDescription="@string/background_login"/>
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
 
     <TextView
             android:id="@+id/welcome_text"
@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/WelcomeText.Main"
+            android:elevation="15dp"
             app:layout_constraintBottom_toTopOf="@+id/welcome_subtext"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/WelcomeText.Addition"
+            android:elevation="15dp"
             app:layout_constraintBottom_toTopOf="@+id/input_form" android:layout_marginBottom="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -45,12 +47,11 @@
             android:id="@+id/input_form"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:elevation="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="24dp">
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp">
 
         <EditText
                 android:id="@+id/input_email"
@@ -87,7 +88,9 @@
                 android:layout_height="0dp"
                 android:background="@drawable/button_accept"
                 android:text="@string/btn_accept_text"
-                android:textColor="#fff"
+                style="OKButton"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sf_ui_display_regular"
                 android:layout_alignTop="@+id/input_form"
                 android:layout_alignBottom="@+id/input_form"
                 android:layout_alignEnd="@+id/input_form"

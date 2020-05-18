@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.shape.ShapeAppearanceModel;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.input_email)
     EditText inputEmail;
 
+    @BindView(R.id.background)
+    ShapeableImageView background;
+
     @BindView(R.id.input_password)
     EditText inputPassword;
 
@@ -34,12 +39,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
         ButterKnife.bind(this);
+
+        setUpView();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         initForm();
+    }
+
+    private void setUpView() {
+        background.setShapeAppearanceModel(new ShapeAppearanceModel().withCornerSize(5));
     }
 
     private void initForm() {

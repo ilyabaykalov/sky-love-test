@@ -29,4 +29,5 @@
         <item name="android:textColor">@color/text_input</item>
         <item name="android:textCursorDrawable">@null</item>
     </style>
+
 </resources>
