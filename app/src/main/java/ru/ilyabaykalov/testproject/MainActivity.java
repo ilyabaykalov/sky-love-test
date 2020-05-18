@@ -2,6 +2,7 @@ package ru.ilyabaykalov.testproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.input_password)
     EditText inputPassword;
+
+    @BindView(R.id.ok_button)
+    Button okButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
