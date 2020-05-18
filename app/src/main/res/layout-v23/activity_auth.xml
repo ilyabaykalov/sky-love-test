@@ -53,7 +53,6 @@
             android:layout_marginEnd="24dp">
 
         <EditText
-                android:text="hhh@hhh.hhh"
                 android:id="@+id/input_email"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +67,6 @@
                 android:autofillHints=""/>
 
         <EditText
-                android:text="hhhhhh"
                 android:id="@+id/input_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

@@ -9,7 +9,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="0dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:foreground="@drawable/ripple_effect">
 
         <ImageView
                 android:id="@+id/photoView"
